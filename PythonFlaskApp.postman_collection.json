@@ -1,0 +1,80 @@
+{
+	"info": {
+		"_postman_id": "6d9a67da-be59-4312-9b90-3e3f0014d6d3",
+		"name": "PythonFlaskApp",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Add Exam",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{ \r\n    \"title\": \"TypeScript Advanced Exam\",\r\n     \"description\": \"Tricky questions about TypeScript.\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{base_url}}/online-exam/addexam",
+					"host": [
+						"{{base_url}}"
+					],
+					"path": [
+						"online-exam",
+						"addexam"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get Exam",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{base_url}}/online-exam/getexams",
+					"host": [
+						"{{base_url}}"
+					],
+					"path": [
+						"online-exam",
+						"getexams"
+					]
+				}
+			},
+			"response": []
+		}
+	],
+	"event": [
+		{
+			"listen": "prerequest",
+			"script": {
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		},
+		{
+			"listen": "test",
+			"script": {
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		}
+	],
+	"variable": [
+		{
+			"key": "base_url",
+			"value": "http://localhost:5000"
+		}
+	]
+}

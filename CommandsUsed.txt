@@ -1,0 +1,46 @@
+# To install pipenv:
+====================
+pip install pipenv
+
+# To run the docker image for Postgres (And creating database):
+===============================================================
+docker run --name online-exam-db -p 5432:5432 -e POSTGRES_DB=online-exam -e POSTGRES_PASSWORD=0NLIN3-ex4m -d postgres
+
+#Use the following command to install the Angular CLI: (This is needed if not installed.)
+=========================================================================================
+npm install -g @angular/cli
+
+# initialize the virtual environment:
+====================================
+pipenv --three
+
+# install sqlalchemy and psycopg2 on the virtual environment:
+=============================================================
+pipenv install sqlalchemy psycopg2-binary
+
+
+# activate virtual environment:
+===============================
+pipenv shell
+
+# run main module (Go to source dir and run below command):
+===========================================================
+py main.py
+
+# install flask and marshmallow (to enable REST API support): 
+=============================================================
+pipenv install flask marshmallow
+
+# install flask cors for CORS support:
+======================================
+pipenv install flask-cors
+
+# to create the frontend angular app (Go to online-exam  (root of project) dir and run):
+========================================================================================
+# run @angular/cli to bootstrap the Angular app
+ng new frontend
+
+# run below command from frontend dir to run the frontend:
+==========================================================
+# run @angular/cli to bootstrap the Angular app
+ng new frontend
